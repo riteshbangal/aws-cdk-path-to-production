@@ -1,0 +1,36 @@
+name: Show OIDC claims
+
+# Manual helper. Prints the claims inside the OIDC token GitHub issues to a job
+# in the chosen environment, so the IAM trust policy can match `sub` exactly.
+# It prints the claims only, never the token itself.
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: GitHub environment to inspect
+        type: choice
+        options: [dev, qa, production]
+        default: dev
+
+permissions:
+  contents: read
+
+jobs:
+  claims:
+    name: Print token claims
+    runs-on: ubuntu-latest
+    environment: ${{ inputs.environment }}
+    permissions:
+      id-token: write
+    steps:
+      - name: Print iss, aud and sub
+        run: |
+          set -euo pipefail
+          token="$(curl --silent --show-error --fail \
+            -H "Authorization: Bearer ${ACTIONS_ID_TOKEN_REQUEST_TOKEN}" \
+            "${ACTIONS_ID_TOKEN_REQUEST_URL}&audience=sts.amazonaws.com" | jq -r .value)"
+          echo "::add-mask::${token}"
+          payload="$(cut -d. -f2 <<< "$token" | tr '_-' '/+')"
+          while (( ${#payload} % 4 )); do payload+="="; done
+          base64 -d <<< "$payload" | jq '{iss, aud, sub, repository, environment}'

@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1140" viewBox="0 0 800 1140">
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+  <text x="40" y="56" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="700" fill="#0F172A" text-anchor="start">The path to production</text>
+  <text x="40" y="88" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="400" fill="#64748B" text-anchor="start">One commit, one released artifact, three environments</text>
+  <rect x="20" y="112" width="760" height="136" rx="16" ry="16" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+  <text x="40" y="142" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#64748B" text-anchor="start" letter-spacing="1.4">DEVELOP</text>
+  <rect x="40" y="156" width="320" height="72" rx="12" ry="12" fill="#F8FAFC" stroke="#334155" stroke-width="2"/>
+  <text x="200.0" y="188.6472" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="21" font-weight="600" fill="#0F172A" text-anchor="middle">Developer</text>
+  <text x="200.0" y="211.35119999999998" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="400" fill="#64748B" text-anchor="middle">Java app + Java CDK code</text>
+  <rect x="440" y="156" width="320" height="72" rx="12" ry="12" fill="#F8FAFC" stroke="#334155" stroke-width="2"/>
+  <text x="600.0" y="188.6472" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="21" font-weight="600" fill="#0F172A" text-anchor="middle">GitHub</text>
+  <text x="600.0" y="211.35119999999998" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="400" fill="#64748B" text-anchor="middle">pull request · merge · tag</text>
+  <path d="M360.0,192.0 L428.0,192.0" fill="none" stroke="#334155" stroke-width="2.2" stroke-linejoin="round"/>
+  <polygon points="440.0,192.0 428.0,198.5 428.0,185.5" fill="#334155"/>
+  <text x="400" y="182" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="500" fill="#64748B" text-anchor="middle">push</text>
+  <rect x="20" y="266" width="760" height="170" rx="16" ry="16" fill="#F4F7FC" stroke="none" stroke-width="0"/>
+  <text x="40" y="296" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#64748B" text-anchor="start" letter-spacing="1.4">CI</text>
+  <path d="M600.0,228.0 L600.0,300.0" fill="none" stroke="#334155" stroke-width="2.2" stroke-linejoin="round"/>
+  <polygon points="600.0,312.0 593.5,300.0 606.5,300.0" fill="#334155"/>
+  <circle cx="600.0" cy="257" r="4" fill="#334155"/>
+  <path d="M600.0,257.0 L200.0,257.0 L200.0,300.0" fill="none" stroke="#334155" stroke-width="2.2" stroke-linejoin="round"/>
+  <polygon points="200.0,312.0 193.5,300.0 206.5,300.0" fill="#334155"/>
+  <rect x="40" y="312" width="320" height="80" rx="12" ry="12" fill="#EEF3FB" stroke="#4A6FA5" stroke-width="2"/>
+  <text x="200.0" y="348.6472" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="21" font-weight="600" fill="#1E3A66" text-anchor="middle">App CI</text>
+  <text x="200.0" y="371.3512" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="400" fill="#64748B" text-anchor="middle">build · test · package JAR</text>
+  <rect x="440" y="312" width="320" height="80" rx="12" ry="12" fill="#EEF3FB" stroke="#4A6FA5" stroke-width="2"/>
+  <text x="600.0" y="348.6472" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="21" font-weight="600" fill="#1E3A66" text-anchor="middle">Infra CI</text>
+  <text x="600.0" y="371.3512" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="400" fill="#64748B" text-anchor="middle">test · synth · lint templates</text>
+  <text x="600.0" y="420" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#2E8B57" text-anchor="middle">checks only · nothing reaches AWS</text>
+  <rect x="20" y="454" width="760" height="156" rx="16" ry="16" fill="#F6F7F9" stroke="none" stroke-width="0"/>
+  <text x="40" y="484" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#64748B" text-anchor="start" letter-spacing="1.4">ARTIFACTS</text>
+  <path d="M200.0,392.0 L200.0,482.0" fill="none" stroke="#334155" stroke-width="2.2" stroke-linejoin="round"/>
+  <polygon points="200.0,494.0 193.5,482.0 206.5,482.0" fill="#334155"/>
+  <text x="212.0" y="424" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="500" fill="#64748B" text-anchor="start">on tag v1.2.3</text>
+  <rect x="40" y="494" width="320" height="96" rx="12" ry="12" fill="#F3F4F6" stroke="#9CA3AF" stroke-width="2"/>
+  <text x="200.0" y="528.0871999999999" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="21" font-weight="600" fill="#334155" text-anchor="middle">Artifactory</text>
+  <text x="200.0" y="550.7912" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="400" fill="#64748B" text-anchor="middle">hello-world-lambda 1.2.3</text>
+  <text x="200.0" y="571.9112" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="400" fill="#64748B" text-anchor="middle">immutable · SHA-256</text>
+  <text x="600.0" y="532" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="600" fill="#334155" text-anchor="middle">Build once.</text>
+  <text x="600.0" y="558" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="400" fill="#64748B" text-anchor="middle">Every environment deploys</text>
+  <text x="600.0" y="581" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="400" fill="#64748B" text-anchor="middle">these exact bytes.</text>
+  <rect x="20" y="628" width="760" height="152" rx="16" ry="16" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+  <text x="40" y="658" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#64748B" text-anchor="start" letter-spacing="1.4">IaC</text>
+  <path d="M200.0,590.0 L200.0,656.0" fill="none" stroke="#334155" stroke-width="2.2" stroke-linejoin="round"/>
+  <polygon points="200.0,668.0 193.5,656.0 206.5,656.0" fill="#334155"/>
+  <text x="212.0" y="642" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="500" fill="#64748B" text-anchor="start">pinned JAR</text>
+  <rect x="40" y="668" width="320" height="80" rx="12" ry="12" fill="#F8FAFC" stroke="#334155" stroke-width="2"/>
+  <text x="200.0" y="704.6472" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="21" font-weight="600" fill="#0F172A" text-anchor="middle">AWS CDK (Java)</text>
+  <text x="200.0" y="727.3512000000001" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="400" fill="#64748B" text-anchor="middle">GreetingApiStack</text>
+  <rect x="440" y="668" width="320" height="80" rx="12" ry="12" fill="#F8FAFC" stroke="#334155" stroke-width="2"/>
+  <text x="600.0" y="704.6472" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="21" font-weight="600" fill="#0F172A" text-anchor="middle">CloudFormation</text>
+  <text x="600.0" y="727.3512000000001" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="400" fill="#64748B" text-anchor="middle">templates for dev · qa · prod</text>
+  <path d="M360.0,708.0 L428.0,708.0" fill="none" stroke="#334155" stroke-width="2.2" stroke-linejoin="round"/>
+  <polygon points="440.0,708.0 428.0,714.5 428.0,701.5" fill="#334155"/>
+  <text x="400" y="698" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="500" fill="#64748B" text-anchor="middle">cdk synth</text>
+  <rect x="20" y="798" width="760" height="290" rx="16" ry="16" fill="#FFF8F0" stroke="none" stroke-width="0"/>
+  <text x="40" y="828" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#64748B" text-anchor="start" letter-spacing="1.4">DEPLOY &amp; PROMOTE</text>
+  <path d="M600.0,748.0 L600.0,832.0" fill="none" stroke="#334155" stroke-width="2.2" stroke-linejoin="round"/>
+  <path d="M140.0,832.0 L660.0,832.0" fill="none" stroke="#334155" stroke-width="2.2" stroke-linejoin="round"/>
+  <path d="M140.0,832.0 L140.0,860.0" fill="none" stroke="#334155" stroke-width="2.2" stroke-linejoin="round"/>
+  <polygon points="140.0,872.0 133.5,860.0 146.5,860.0" fill="#334155"/>
+  <path d="M400.0,832.0 L400.0,860.0" fill="none" stroke="#334155" stroke-width="2.2" stroke-linejoin="round"/>
+  <polygon points="400.0,872.0 393.5,860.0 406.5,860.0" fill="#334155"/>
+  <path d="M660.0,832.0 L660.0,860.0" fill="none" stroke="#334155" stroke-width="2.2" stroke-linejoin="round"/>
+  <polygon points="660.0,872.0 653.5,860.0 666.5,860.0" fill="#334155"/>
+  <text x="586.0" y="818" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="500" fill="#64748B" text-anchor="end">cdk deploy · same templates</text>
+  <rect x="40" y="872" width="200" height="96" rx="12" ry="12" fill="#FFF4E8" stroke="#D9822B" stroke-width="2"/>
+  <text x="140.0" y="907.4072" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="21" font-weight="600" fill="#7A3E06" text-anchor="middle">Dev</text>
+  <text x="140.0" y="929.1080000000001" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#64748B" text-anchor="middle">API Gateway → Lambda</text>
+  <text x="140.0" y="948.908" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#64748B" text-anchor="middle">automatic</text>
+  <rect x="300" y="872" width="200" height="96" rx="12" ry="12" fill="#FFF4E8" stroke="#D9822B" stroke-width="2"/>
+  <text x="400.0" y="907.4072" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="21" font-weight="600" fill="#7A3E06" text-anchor="middle">QA</text>
+  <text x="400.0" y="929.1080000000001" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#64748B" text-anchor="middle">API Gateway → Lambda</text>
+  <text x="400.0" y="948.908" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#64748B" text-anchor="middle">automatic</text>
+  <rect x="560" y="872" width="200" height="96" rx="12" ry="12" fill="#FFF4E8" stroke="#D9822B" stroke-width="2"/>
+  <text x="660.0" y="907.4072" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="21" font-weight="600" fill="#7A3E06" text-anchor="middle">Prod</text>
+  <text x="660.0" y="929.1080000000001" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#64748B" text-anchor="middle">API Gateway → Lambda</text>
+  <text x="660.0" y="948.908" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#64748B" text-anchor="middle">after approval</text>
+  <path d="M240.0,920.0 L288.0,920.0" fill="none" stroke="#334155" stroke-width="2.2" stroke-linejoin="round"/>
+  <polygon points="300.0,920.0 288.0,926.5 288.0,913.5" fill="#334155"/>
+  <path d="M500.0,920.0 L548.0,920.0" fill="none" stroke="#334155" stroke-width="2.2" stroke-linejoin="round"/>
+  <polygon points="560.0,920.0 548.0,926.5 548.0,913.5" fill="#334155"/>
+  <rect x="200.0" y="990" width="140" height="38" rx="19.0" ry="19.0" fill="#ECF7F0" stroke="#2E8B57" stroke-width="2"/>
+  <path d="M228.0,1009.0 l5,5 l9,-10" fill="none" stroke="#2E8B57" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="278" y="1014.4" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#14532D" text-anchor="middle">smoke</text>
+  <rect x="460.0" y="990" width="140" height="38" rx="19.0" ry="19.0" fill="#ECF7F0" stroke="#2E8B57" stroke-width="2"/>
+  <path d="M488.0,1009.0 l5,5 l9,-10" fill="none" stroke="#2E8B57" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="538" y="1014.4" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#14532D" text-anchor="middle">tests</text>
+  <rect x="460.0" y="1036" width="140" height="38" rx="19.0" ry="19.0" fill="#FFFFFF" stroke="#334155" stroke-width="2" stroke-dasharray="7 6"/>
+  <text x="530" y="1060.4" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#0F172A" text-anchor="middle">approval</text>
+  <path d="M270,940 L270,990" stroke="#CBD5E1" stroke-width="2"/>
+  <path d="M530,940 L530,990" stroke="#CBD5E1" stroke-width="2"/>
+  <text x="400.0" y="1118" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="500" fill="#334155" text-anchor="middle" font-style="italic">The app is Hello World. The value is the path that delivers it.</text>
+</svg>

@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1220" viewBox="0 0 800 1220">
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+  <text x="40" y="56" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="700" fill="#0F172A" text-anchor="start">Promotion: each environment earns the next</text>
+  <text x="40" y="88" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="400" fill="#64748B" text-anchor="start">Same JAR, same templates. Gates decide how far a release goes.</text>
+  <rect x="220.0" y="120" width="360" height="96" rx="12" ry="12" fill="#F8FAFC" stroke="#334155" stroke-width="2"/>
+  <text x="400.0" y="154.0872" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="21" font-weight="600" fill="#0F172A" text-anchor="middle">Release 1.2.3</text>
+  <text x="400.0" y="176.79119999999998" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="400" fill="#64748B" text-anchor="middle">pinned JAR + SHA-256</text>
+  <text x="400.0" y="197.91119999999998" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="400" fill="#64748B" text-anchor="middle">templates synthesized once</text>
+  <path d="M400.0,216.0 L400.0,244.0" fill="none" stroke="#334155" stroke-width="2.2" stroke-linejoin="round"/>
+  <polygon points="400.0,256.0 393.5,244.0 406.5,244.0" fill="#334155"/>
+  <rect x="220.0" y="256" width="360" height="64" rx="12" ry="12" fill="#FFF4E8" stroke="#D9822B" stroke-width="2"/>
+  <text x="400.0" y="294.86400000000003" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="600" fill="#7A3E06" text-anchor="middle">Deploy Dev</text>
+  <text x="204.0" y="294" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" fill="#64748B" text-anchor="end">automatic</text>
+  <path d="M400.0,320.0 L400.0,344.0" fill="none" stroke="#334155" stroke-width="2.2" stroke-linejoin="round"/>
+  <polygon points="400.0,356.0 393.5,344.0 406.5,344.0" fill="#334155"/>
+  <rect x="270.0" y="356" width="260" height="52" rx="26.0" ry="26.0" fill="#ECF7F0" stroke="#2E8B57" stroke-width="2"/>
+  <path d="M331.4,382.0 l5,5 l9,-10" fill="none" stroke="#2E8B57" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="408" y="388.12" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="600" fill="#14532D" text-anchor="middle">Smoke test</text>
+  <path d="M530.0,382.0 L616.0,382.0" fill="none" stroke="#B54434" stroke-width="2.2" stroke-linejoin="round"/>
+  <polygon points="628.0,382.0 616.0,388.5 616.0,375.5" fill="#B54434"/>
+  <text x="579.0" y="373" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="500" fill="#B54434" text-anchor="middle">fail</text>
+  <rect x="628" y="352" width="140" height="60" rx="12" ry="12" fill="#FCEDEB" stroke="#B54434" stroke-width="2"/>
+  <text x="698.0" y="379.2544" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="600" fill="#7F1D1D" text-anchor="middle">Stop</text>
+  <text x="698.0" y="397.6816" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="400" fill="#64748B" text-anchor="middle">investigate</text>
+  <path d="M400.0,408.0 L400.0,444.0" fill="none" stroke="#334155" stroke-width="2.2" stroke-linejoin="round"/>
+  <polygon points="400.0,456.0 393.5,444.0 406.5,444.0" fill="#334155"/>
+  <text x="412" y="438.0" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="500" fill="#2E8B57" text-anchor="start">pass</text>
+  <rect x="220.0" y="456" width="360" height="64" rx="12" ry="12" fill="#FFF4E8" stroke="#D9822B" stroke-width="2"/>
+  <text x="400.0" y="494.86400000000003" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="600" fill="#7A3E06" text-anchor="middle">Deploy QA</text>
+  <text x="204.0" y="494" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" fill="#64748B" text-anchor="end">automatic</text>
+  <path d="M400.0,520.0 L400.0,544.0" fill="none" stroke="#334155" stroke-width="2.2" stroke-linejoin="round"/>
+  <polygon points="400.0,556.0 393.5,544.0 406.5,544.0" fill="#334155"/>
+  <rect x="250.0" y="556" width="300" height="52" rx="26.0" ry="26.0" fill="#ECF7F0" stroke="#2E8B57" stroke-width="2"/>
+  <path d="M288.56,582.0 l5,5 l9,-10" fill="none" stroke="#2E8B57" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="408" y="588.12" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="600" fill="#14532D" text-anchor="middle">Smoke + integration</text>
+  <path d="M550.0,582.0 L616.0,582.0" fill="none" stroke="#B54434" stroke-width="2.2" stroke-linejoin="round"/>
+  <polygon points="628.0,582.0 616.0,588.5 616.0,575.5" fill="#B54434"/>
+  <text x="589.0" y="573" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="500" fill="#B54434" text-anchor="middle">fail</text>
+  <rect x="628" y="552" width="140" height="60" rx="12" ry="12" fill="#FCEDEB" stroke="#B54434" stroke-width="2"/>
+  <text x="698.0" y="579.2544" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="600" fill="#7F1D1D" text-anchor="middle">Stop</text>
+  <text x="698.0" y="597.6816000000001" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="400" fill="#64748B" text-anchor="middle">investigate</text>
+  <path d="M400.0,608.0 L400.0,644.0" fill="none" stroke="#334155" stroke-width="2.2" stroke-linejoin="round"/>
+  <polygon points="400.0,656.0 393.5,644.0 406.5,644.0" fill="#334155"/>
+  <text x="412" y="638.0" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="500" fill="#2E8B57" text-anchor="start">pass</text>
+  <rect x="220.0" y="656" width="360" height="64" rx="12" ry="12" fill="#FFFFFF" stroke="#334155" stroke-width="2" stroke-dasharray="7 6"/>
+  <text x="400.0" y="694.8639999999999" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="600" fill="#0F172A" text-anchor="middle">Production approval</text>
+  <text x="204.0" y="694" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" fill="#64748B" text-anchor="end">a person</text>
+  <path d="M580.0,688.0 L616.0,688.0" fill="none" stroke="#B54434" stroke-width="2.2" stroke-linejoin="round"/>
+  <polygon points="628.0,688.0 616.0,694.5 616.0,681.5" fill="#B54434"/>
+  <text x="604.0" y="710" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="500" fill="#B54434" text-anchor="middle">reject</text>
+  <rect x="628" y="658" width="140" height="60" rx="12" ry="12" fill="#FCEDEB" stroke="#B54434" stroke-width="2"/>
+  <text x="698.0" y="693.8344" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="600" fill="#7F1D1D" text-anchor="middle">Stop</text>
+  <path d="M400.0,720.0 L400.0,756.0" fill="none" stroke="#334155" stroke-width="2.2" stroke-linejoin="round"/>
+  <polygon points="400.0,768.0 393.5,756.0 406.5,756.0" fill="#334155"/>
+  <text x="412" y="750.0" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="500" fill="#2E8B57" text-anchor="start">approve</text>
+  <rect x="220.0" y="768" width="360" height="64" rx="12" ry="12" fill="#FFF4E8" stroke="#D9822B" stroke-width="2"/>
+  <text x="400.0" y="806.8639999999999" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="600" fill="#7A3E06" text-anchor="middle">Deploy Prod</text>
+  <text x="204.0" y="806" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" fill="#64748B" text-anchor="end">after approval</text>
+  <path d="M400.0,832.0 L400.0,856.0" fill="none" stroke="#334155" stroke-width="2.2" stroke-linejoin="round"/>
+  <polygon points="400.0,868.0 393.5,856.0 406.5,856.0" fill="#334155"/>
+  <rect x="250.0" y="868" width="300" height="52" rx="26.0" ry="26.0" fill="#ECF7F0" stroke="#2E8B57" stroke-width="2"/>
+  <path d="M288.56,894.0 l5,5 l9,-10" fill="none" stroke="#2E8B57" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="408" y="900.12" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="600" fill="#14532D" text-anchor="middle">Smoke test + alarms</text>
+  <path d="M550.0,894.0 L616.0,894.0" fill="none" stroke="#B54434" stroke-width="2.2" stroke-linejoin="round"/>
+  <polygon points="628.0,894.0 616.0,900.5 616.0,887.5" fill="#B54434"/>
+  <text x="589.0" y="885" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="500" fill="#B54434" text-anchor="middle">fail</text>
+  <rect x="628" y="864" width="140" height="60" rx="12" ry="12" fill="#FCEDEB" stroke="#B54434" stroke-width="2"/>
+  <text x="698.0" y="891.2544" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="600" fill="#7F1D1D" text-anchor="middle">Incident</text>
+  <text x="698.0" y="909.6816000000001" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="400" fill="#64748B" text-anchor="middle">rollback runbook</text>
+  <path d="M400.0,920.0 L400.0,956.0" fill="none" stroke="#334155" stroke-width="2.2" stroke-linejoin="round"/>
+  <polygon points="400.0,968.0 393.5,956.0 406.5,956.0" fill="#334155"/>
+  <text x="412" y="950.0" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="500" fill="#2E8B57" text-anchor="start">pass</text>
+  <rect x="220.0" y="968" width="360" height="56" rx="28.0" ry="28.0" fill="#ECF7F0" stroke="#2E8B57" stroke-width="2"/>
+  <text x="400" y="1002.84" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="19" font-weight="600" fill="#14532D" text-anchor="middle">Release complete</text>
+  <rect x="70" y="1056" width="28" height="20" rx="5" ry="5" fill="#FFF4E8" stroke="#D9822B" stroke-width="2"/>
+  <text x="108" y="1072" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="500" fill="#334155" text-anchor="start">automated deploy</text>
+  <rect x="279.6" y="1056" width="28" height="20" rx="5" ry="5" fill="#ECF7F0" stroke="#2E8B57" stroke-width="2"/>
+  <text x="317.6" y="1072" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="500" fill="#334155" text-anchor="start">gate</text>
+  <rect x="386.0" y="1056" width="28" height="20" rx="5" ry="5" fill="#FFFFFF" stroke="#334155" stroke-width="2" stroke-dasharray="5 4"/>
+  <text x="424.0" y="1072" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="500" fill="#334155" text-anchor="start">human decision</text>
+  <rect x="578.4" y="1056" width="28" height="20" rx="5" ry="5" fill="#FCEDEB" stroke="#B54434" stroke-width="2"/>
+  <text x="616.4" y="1072" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="500" fill="#334155" text-anchor="start">stop</text>
+  <text x="400.0" y="1136" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="500" fill="#334155" text-anchor="middle" font-style="italic">A failed gate stops promotion. It doesn&#x27;t roll back what&#x27;s deployed.</text>
+  <text x="400.0" y="1166" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="500" fill="#334155" text-anchor="middle" font-style="italic">Build once, deploy many: no environment gets a rebuilt artifact.</text>
+</svg>

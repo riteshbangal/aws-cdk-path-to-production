@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="830" viewBox="0 0 800 830">
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+  <text x="40" y="56" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="700" fill="#0F172A" text-anchor="start">Two kinds of code, one application</text>
+  <text x="40" y="88" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="400" fill="#64748B" text-anchor="start">They change for different reasons, so they build separately</text>
+  <rect x="20" y="116" width="370" height="448" rx="16" ry="16" fill="#F4F7FC" stroke="none" stroke-width="0"/>
+  <rect x="410" y="116" width="370" height="448" rx="16" ry="16" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+  <text x="40" y="148" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#64748B" text-anchor="start" letter-spacing="1.4">APPLICATION</text>
+  <text x="40" y="172" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="16" font-weight="500" fill="#334155" text-anchor="start">app/</text>
+  <text x="430" y="148" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#64748B" text-anchor="start" letter-spacing="1.4">INFRASTRUCTURE</text>
+  <text x="430" y="172" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="16" font-weight="500" fill="#334155" text-anchor="start">infrastructure/</text>
+  <rect x="55" y="196" width="300" height="84" rx="12" ry="12" fill="#F8FAFC" stroke="#334155" stroke-width="2"/>
+  <text x="205.0" y="234.6472" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="21" font-weight="600" fill="#0F172A" text-anchor="middle">HelloHandler.java</text>
+  <text x="205.0" y="257.3512" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="400" fill="#64748B" text-anchor="middle">returns &quot;Hello, World!&quot;</text>
+  <rect x="55" y="322" width="300" height="84" rx="12" ry="12" fill="#EEF3FB" stroke="#4A6FA5" stroke-width="2"/>
+  <text x="205.0" y="360.6472" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="21" font-weight="600" fill="#1E3A66" text-anchor="middle">Gradle</text>
+  <text x="205.0" y="383.3512" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="400" fill="#64748B" text-anchor="middle">compile · unit tests · package</text>
+  <rect x="55" y="448" width="300" height="84" rx="12" ry="12" fill="#EEF3FB" stroke="#4A6FA5" stroke-width="2"/>
+  <text x="205.0" y="486.6472" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="21" font-weight="600" fill="#1E3A66" text-anchor="middle">Lambda JAR</text>
+  <text x="205.0" y="509.3512" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="400" fill="#64748B" text-anchor="middle">versioned, built once</text>
+  <rect x="445" y="196" width="300" height="84" rx="12" ry="12" fill="#F8FAFC" stroke="#334155" stroke-width="2"/>
+  <text x="595.0" y="234.6472" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="21" font-weight="600" fill="#0F172A" text-anchor="middle">GreetingApiStack.java</text>
+  <text x="595.0" y="257.3512" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="400" fill="#64748B" text-anchor="middle">Lambda · API Gateway · logs</text>
+  <rect x="445" y="322" width="300" height="84" rx="12" ry="12" fill="#F8FAFC" stroke="#334155" stroke-width="2"/>
+  <text x="595.0" y="360.6472" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="21" font-weight="600" fill="#0F172A" text-anchor="middle">cdk synth</text>
+  <text x="595.0" y="383.3512" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="400" fill="#64748B" text-anchor="middle">runs the Java, writes files</text>
+  <rect x="445" y="448" width="300" height="84" rx="12" ry="12" fill="#F8FAFC" stroke="#334155" stroke-width="2"/>
+  <text x="595.0" y="486.6472" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="21" font-weight="600" fill="#0F172A" text-anchor="middle">CloudFormation</text>
+  <text x="595.0" y="509.3512" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="400" fill="#64748B" text-anchor="middle">template + packaged assets</text>
+  <path d="M205.0,280.0 L205.0,310.0" fill="none" stroke="#334155" stroke-width="2.2" stroke-linejoin="round"/>
+  <polygon points="205.0,322.0 198.5,310.0 211.5,310.0" fill="#334155"/>
+  <path d="M205.0,406.0 L205.0,436.0" fill="none" stroke="#334155" stroke-width="2.2" stroke-linejoin="round"/>
+  <polygon points="205.0,448.0 198.5,436.0 211.5,436.0" fill="#334155"/>
+  <path d="M595.0,280.0 L595.0,310.0" fill="none" stroke="#334155" stroke-width="2.2" stroke-linejoin="round"/>
+  <polygon points="595.0,322.0 588.5,310.0 601.5,310.0" fill="#334155"/>
+  <path d="M595.0,406.0 L595.0,436.0" fill="none" stroke="#334155" stroke-width="2.2" stroke-linejoin="round"/>
+  <polygon points="595.0,448.0 588.5,436.0 601.5,436.0" fill="#334155"/>
+  <path d="M205.0,532.0 L205.0,628.0" fill="none" stroke="#334155" stroke-width="2.2" stroke-linejoin="round"/>
+  <polygon points="205.0,640.0 198.5,628.0 211.5,628.0" fill="#334155"/>
+  <text x="217.0" y="600" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="500" fill="#64748B" text-anchor="start">the JAR</text>
+  <path d="M595.0,532.0 L595.0,628.0" fill="none" stroke="#334155" stroke-width="2.2" stroke-linejoin="round"/>
+  <polygon points="595.0,640.0 588.5,628.0 601.5,628.0" fill="#334155"/>
+  <text x="607.0" y="600" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="500" fill="#64748B" text-anchor="start">the template</text>
+  <rect x="100" y="640" width="600" height="104" rx="12" ry="12" fill="#FFF4E8" stroke="#D9822B" stroke-width="2"/>
+  <text x="400.0" y="678.0871999999999" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="21" font-weight="600" fill="#7A3E06" text-anchor="middle">cdk deploy → AWS</text>
+  <text x="400.0" y="700.7912" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="400" fill="#64748B" text-anchor="middle">CloudFormation creates API Gateway + Lambda,</text>
+  <text x="400.0" y="721.9112" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="400" fill="#64748B" text-anchor="middle">and the Lambda runs the JAR</text>
+  <text x="400.0" y="800" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="500" fill="#334155" text-anchor="middle" font-style="italic">They meet only at deployment, through a pinned, versioned JAR.</text>
+</svg>

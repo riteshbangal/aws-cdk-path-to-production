@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="820" viewBox="0 0 800 820">
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+  <text x="40" y="56" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="700" fill="#0F172A" text-anchor="start">Three pipelines, three jobs</text>
+  <text x="40" y="88" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="400" fill="#64748B" text-anchor="start">Two pipelines check. Only one changes AWS.</text>
+  <rect x="20" y="112" width="496" height="616" rx="16" ry="16" fill="#F4F7FC" stroke="none" stroke-width="0"/>
+  <text x="40" y="142" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#64748B" text-anchor="start" letter-spacing="1.4">CHECKS · NO AWS ACCESS</text>
+  <rect x="532" y="112" width="248" height="616" rx="16" ry="16" fill="#FFF8F0" stroke="none" stroke-width="0"/>
+  <text x="552" y="142" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#64748B" text-anchor="start" letter-spacing="1.4">CHANGES AWS</text>
+  <text x="146" y="176" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="21" font-weight="700" fill="#0F172A" text-anchor="middle">App CI</text>
+  <text x="146" y="200" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="14" font-weight="500" fill="#64748B" text-anchor="middle">app-ci.yml</text>
+  <rect x="36" y="222" width="220" height="56" rx="12" ry="12" fill="#EEF3FB" stroke="#4A6FA5" stroke-width="2"/>
+  <text x="146.0" y="256.1776" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="600" fill="#1E3A66" text-anchor="middle">Commit or tag</text>
+  <path d="M146.0,278.0 L146.0,292.0" fill="none" stroke="#334155" stroke-width="2.2" stroke-linejoin="round"/>
+  <polygon points="146.0,304.0 139.5,292.0 152.5,292.0" fill="#334155"/>
+  <rect x="36" y="304" width="220" height="56" rx="12" ry="12" fill="#EEF3FB" stroke="#4A6FA5" stroke-width="2"/>
+  <text x="146.0" y="338.1776" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="600" fill="#1E3A66" text-anchor="middle">Build + unit tests</text>
+  <path d="M146.0,360.0 L146.0,374.0" fill="none" stroke="#334155" stroke-width="2.2" stroke-linejoin="round"/>
+  <polygon points="146.0,386.0 139.5,374.0 152.5,374.0" fill="#334155"/>
+  <rect x="36" y="386" width="220" height="56" rx="12" ry="12" fill="#EEF3FB" stroke="#4A6FA5" stroke-width="2"/>
+  <text x="146.0" y="420.1776" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="600" fill="#1E3A66" text-anchor="middle">Package JAR</text>
+  <path d="M146.0,442.0 L146.0,456.0" fill="none" stroke="#334155" stroke-width="2.2" stroke-linejoin="round"/>
+  <polygon points="146.0,468.0 139.5,456.0 152.5,456.0" fill="#334155"/>
+  <rect x="36" y="468" width="220" height="56" rx="12" ry="12" fill="#EEF3FB" stroke="#4A6FA5" stroke-width="2"/>
+  <text x="146.0" y="502.1776" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="600" fill="#1E3A66" text-anchor="middle">Publish (tags only)</text>
+  <path d="M146.0,524.0 L146.0,538.0" fill="none" stroke="#334155" stroke-width="2.2" stroke-linejoin="round"/>
+  <polygon points="146.0,550.0 139.5,538.0 152.5,538.0" fill="#334155"/>
+  <rect x="46.0" y="550" width="200" height="48" rx="24.0" ry="24.0" fill="#F3F4F6" stroke="#9CA3AF" stroke-width="2"/>
+  <text x="146" y="580.12" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="600" fill="#334155" text-anchor="middle">Artifactory</text>
+  <text x="146" y="624" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="500" fill="#64748B" text-anchor="middle">read by Infra CI</text>
+  <text x="146" y="644" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="500" fill="#64748B" text-anchor="middle">and Release</text>
+  <text x="390" y="176" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="21" font-weight="700" fill="#0F172A" text-anchor="middle">Infra CI</text>
+  <text x="390" y="200" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="14" font-weight="500" fill="#64748B" text-anchor="middle">infra-ci.yml</text>
+  <rect x="280" y="222" width="220" height="56" rx="12" ry="12" fill="#EEF3FB" stroke="#4A6FA5" stroke-width="2"/>
+  <text x="390.0" y="256.1776" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="600" fill="#1E3A66" text-anchor="middle">Infra change</text>
+  <path d="M390.0,278.0 L390.0,292.0" fill="none" stroke="#334155" stroke-width="2.2" stroke-linejoin="round"/>
+  <polygon points="390.0,304.0 383.5,292.0 396.5,292.0" fill="#334155"/>
+  <rect x="280" y="304" width="220" height="56" rx="12" ry="12" fill="#EEF3FB" stroke="#4A6FA5" stroke-width="2"/>
+  <text x="390.0" y="338.1776" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="600" fill="#1E3A66" text-anchor="middle">Test CDK code</text>
+  <path d="M390.0,360.0 L390.0,374.0" fill="none" stroke="#334155" stroke-width="2.2" stroke-linejoin="round"/>
+  <polygon points="390.0,386.0 383.5,374.0 396.5,374.0" fill="#334155"/>
+  <rect x="280" y="386" width="220" height="56" rx="12" ry="12" fill="#EEF3FB" stroke="#4A6FA5" stroke-width="2"/>
+  <text x="390.0" y="420.1776" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="600" fill="#1E3A66" text-anchor="middle">Get pinned JAR</text>
+  <path d="M390.0,442.0 L390.0,456.0" fill="none" stroke="#334155" stroke-width="2.2" stroke-linejoin="round"/>
+  <polygon points="390.0,468.0 383.5,456.0 396.5,456.0" fill="#334155"/>
+  <rect x="280" y="468" width="220" height="56" rx="12" ry="12" fill="#EEF3FB" stroke="#4A6FA5" stroke-width="2"/>
+  <text x="390.0" y="502.1776" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="600" fill="#1E3A66" text-anchor="middle">Synth all envs</text>
+  <path d="M390.0,524.0 L390.0,538.0" fill="none" stroke="#334155" stroke-width="2.2" stroke-linejoin="round"/>
+  <polygon points="390.0,550.0 383.5,538.0 396.5,538.0" fill="#334155"/>
+  <rect x="280" y="550" width="220" height="56" rx="12" ry="12" fill="#EEF3FB" stroke="#4A6FA5" stroke-width="2"/>
+  <text x="390.0" y="584.1776" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="600" fill="#1E3A66" text-anchor="middle">cfn-lint</text>
+  <path d="M390.0,606.0 L390.0,620.0" fill="none" stroke="#334155" stroke-width="2.2" stroke-linejoin="round"/>
+  <polygon points="390.0,632.0 383.5,620.0 396.5,620.0" fill="#334155"/>
+  <rect x="290.0" y="632" width="200" height="48" rx="24.0" ry="24.0" fill="#ECF7F0" stroke="#2E8B57" stroke-width="2"/>
+  <path d="M297.6,656.0 l5,5 l9,-10" fill="none" stroke="#2E8B57" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="398" y="662.12" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="600" fill="#14532D" text-anchor="middle">Valid templates</text>
+  <text x="656" y="176" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="21" font-weight="700" fill="#0F172A" text-anchor="middle">Release</text>
+  <text x="656" y="200" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="14" font-weight="500" fill="#64748B" text-anchor="middle">release.yml</text>
+  <rect x="546" y="222" width="220" height="56" rx="12" ry="12" fill="#FFF4E8" stroke="#D9822B" stroke-width="2"/>
+  <text x="656.0" y="256.1776" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="600" fill="#7A3E06" text-anchor="middle">Get pinned JAR</text>
+  <path d="M656.0,278.0 L656.0,292.0" fill="none" stroke="#334155" stroke-width="2.2" stroke-linejoin="round"/>
+  <polygon points="656.0,304.0 649.5,292.0 662.5,292.0" fill="#334155"/>
+  <rect x="546" y="304" width="220" height="56" rx="12" ry="12" fill="#FFF4E8" stroke="#D9822B" stroke-width="2"/>
+  <text x="656.0" y="338.1776" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="600" fill="#7A3E06" text-anchor="middle">Synthesize once</text>
+  <path d="M656.0,360.0 L656.0,374.0" fill="none" stroke="#334155" stroke-width="2.2" stroke-linejoin="round"/>
+  <polygon points="656.0,386.0 649.5,374.0 662.5,374.0" fill="#334155"/>
+  <rect x="546" y="386" width="220" height="56" rx="12" ry="12" fill="#FFF4E8" stroke="#D9822B" stroke-width="2"/>
+  <text x="656.0" y="420.1776" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="600" fill="#7A3E06" text-anchor="middle">Sign in (OIDC)</text>
+  <path d="M656.0,442.0 L656.0,456.0" fill="none" stroke="#334155" stroke-width="2.2" stroke-linejoin="round"/>
+  <polygon points="656.0,468.0 649.5,456.0 662.5,456.0" fill="#334155"/>
+  <rect x="546" y="468" width="220" height="56" rx="12" ry="12" fill="#FFF4E8" stroke="#D9822B" stroke-width="2"/>
+  <text x="656.0" y="502.1776" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="600" fill="#7A3E06" text-anchor="middle">cdk deploy</text>
+  <path d="M656.0,524.0 L656.0,538.0" fill="none" stroke="#334155" stroke-width="2.2" stroke-linejoin="round"/>
+  <polygon points="656.0,550.0 649.5,538.0 662.5,538.0" fill="#334155"/>
+  <rect x="546" y="550" width="220" height="56" rx="12" ry="12" fill="#FFF4E8" stroke="#D9822B" stroke-width="2"/>
+  <text x="656.0" y="584.1776" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="600" fill="#7A3E06" text-anchor="middle">Smoke test</text>
+  <path d="M656.0,606.0 L656.0,620.0" fill="none" stroke="#334155" stroke-width="2.2" stroke-linejoin="round"/>
+  <polygon points="656.0,632.0 649.5,620.0 662.5,620.0" fill="#334155"/>
+  <rect x="556.0" y="632" width="200" height="48" rx="24.0" ry="24.0" fill="#ECF7F0" stroke="#2E8B57" stroke-width="2"/>
+  <path d="M582.64,656.0 l5,5 l9,-10" fill="none" stroke="#2E8B57" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="664" y="662.12" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="600" fill="#14532D" text-anchor="middle">Running API</text>
+  <text x="400.0" y="776" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="500" fill="#334155" text-anchor="middle" font-style="italic">A green check proves the templates are valid, not that a deploy will work.</text>
+</svg>

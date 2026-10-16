@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="930" viewBox="0 0 800 930">
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+  <text x="40" y="56" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="700" fill="#0F172A" text-anchor="start">Signing in to AWS without stored keys</text>
+  <text x="40" y="88" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="400" fill="#64748B" text-anchor="start">GitHub vouches for the job. AWS hands out a one-hour pass.</text>
+  <rect x="40" y="128" width="240" height="272" rx="12" ry="12" fill="#EEF3FB" stroke="#4A6FA5" stroke-width="2"/>
+  <text x="160.0" y="259.9608" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="19" font-weight="600" fill="#1E3A66" text-anchor="middle">GitHub Actions job</text>
+  <text x="160.0" y="282.0312" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="400" fill="#64748B" text-anchor="middle">environment: dev</text>
+  <rect x="480" y="128" width="280" height="96" rx="12" ry="12" fill="#F3F4F6" stroke="#9CA3AF" stroke-width="2"/>
+  <text x="620.0" y="172.6472" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="21" font-weight="600" fill="#334155" text-anchor="middle">GitHub OIDC issuer</text>
+  <text x="620.0" y="195.35119999999998" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="400" fill="#64748B" text-anchor="middle">signs an identity token</text>
+  <rect x="480" y="304" width="280" height="96" rx="12" ry="12" fill="#FFF4E8" stroke="#D9822B" stroke-width="2"/>
+  <text x="620.0" y="348.6472" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="21" font-weight="600" fill="#7A3E06" text-anchor="middle">AWS STS</text>
+  <text x="620.0" y="371.3512" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="400" fill="#64748B" text-anchor="middle">security token service</text>
+  <rect x="480" y="452" width="280" height="96" rx="12" ry="12" fill="#FFF4E8" stroke="#D9822B" stroke-width="2"/>
+  <text x="620.0" y="496.6472" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="21" font-weight="600" fill="#7A3E06" text-anchor="middle">IAM deploy role</text>
+  <text x="620.0" y="519.3512000000001" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="400" fill="#64748B" text-anchor="middle">one per environment</text>
+  <path d="M280.0,156.0 L468.0,156.0" fill="none" stroke="#334155" stroke-width="2.2" stroke-linejoin="round"/>
+  <polygon points="480.0,156.0 468.0,162.5 468.0,149.5" fill="#334155"/>
+  <circle cx="306" cy="156" r="13" fill="#334155"/>
+  <text x="306" y="161.5" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+  <text x="326" y="146" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="500" fill="#64748B" text-anchor="start">request a token</text>
+  <path d="M480.0,196.0 L292.0,196.0" fill="none" stroke="#334155" stroke-width="2.2" stroke-linejoin="round"/>
+  <polygon points="280.0,196.0 292.0,189.5 292.0,202.5" fill="#334155"/>
+  <circle cx="306" cy="196" r="13" fill="#334155"/>
+  <text x="306" y="201.5" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+  <text x="326" y="220" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="500" fill="#64748B" text-anchor="start">signed token (JWT)</text>
+  <path d="M280.0,332.0 L468.0,332.0" fill="none" stroke="#334155" stroke-width="2.2" stroke-linejoin="round"/>
+  <polygon points="480.0,332.0 468.0,338.5 468.0,325.5" fill="#334155"/>
+  <circle cx="306" cy="332" r="13" fill="#334155"/>
+  <text x="306" y="337.5" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+  <text x="326" y="322" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="500" fill="#64748B" text-anchor="start">exchange token</text>
+  <path d="M480.0,372.0 L292.0,372.0" fill="none" stroke="#2E8B57" stroke-width="2.2" stroke-linejoin="round"/>
+  <polygon points="280.0,372.0 292.0,365.5 292.0,378.5" fill="#2E8B57"/>
+  <circle cx="306" cy="372" r="13" fill="#334155"/>
+  <text x="306" y="377.5" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text>
+  <text x="326" y="396" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#2E8B57" text-anchor="start">1-hour credentials</text>
+  <path d="M620.0,400.0 L620.0,440.0" fill="none" stroke="#334155" stroke-width="2.2" stroke-linejoin="round"/>
+  <polygon points="620.0,452.0 613.5,440.0 626.5,440.0" fill="#334155"/>
+  <circle cx="596.0" cy="426" r="13" fill="#334155"/>
+  <text x="596.0" y="431.5" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+  <text x="634.0" y="431" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="500" fill="#64748B" text-anchor="start">check trust policy</text>
+  <path d="M160.0,400.0 L160.0,472.0" fill="none" stroke="#334155" stroke-width="2.2" stroke-linejoin="round"/>
+  <polygon points="160.0,484.0 153.5,472.0 166.5,472.0" fill="#334155"/>
+  <rect x="40" y="484" width="240" height="64" rx="12" ry="12" fill="#FFF4E8" stroke="#D9822B" stroke-width="2"/>
+  <text x="160.0" y="522.864" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="600" fill="#7A3E06" text-anchor="middle">cdk deploy</text>
+  <rect x="40" y="584" width="720" height="140" rx="12" ry="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2"/>
+  <text x="64" y="618" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="600" fill="#0F172A" text-anchor="start">The role&#x27;s trust policy accepts only this token:</text>
+  <text x="64" y="652" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="15" font-weight="700" fill="#64748B" text-anchor="start">iss</text>
+  <text x="112" y="652" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="15" font-weight="500" fill="#334155" text-anchor="start">token.actions.githubusercontent.com</text>
+  <text x="64" y="678" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="15" font-weight="700" fill="#64748B" text-anchor="start">aud</text>
+  <text x="112" y="678" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="15" font-weight="500" fill="#334155" text-anchor="start">sts.amazonaws.com</text>
+  <text x="64" y="704" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="15" font-weight="700" fill="#64748B" text-anchor="start">sub</text>
+  <text x="112" y="704" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="15" font-weight="500" fill="#334155" text-anchor="start">repo:owner@id/repo@id:environment:dev</text>
+  <rect x="40.0" y="752" width="720" height="46" rx="23.0" ry="23.0" fill="#ECF7F0" stroke="#2E8B57" stroke-width="2"/>
+  <path d="M193.35999999999999,775.0 l5,5 l9,-10" fill="none" stroke="#2E8B57" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="408" y="781.12" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="600" fill="#14532D" text-anchor="middle">No long-lived AWS keys stored in GitHub</text>
+  <rect x="40" y="820" width="720" height="70" rx="12" ry="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2" stroke-dasharray="5 5"/>
+  <text x="400" y="849" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="600" fill="#334155" text-anchor="middle">Separate decision: where the job runs.</text>
+  <text x="400" y="874" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#64748B" text-anchor="middle">GitHub-hosted or self-hosted runners can both sign in this way.</text>
+</svg>

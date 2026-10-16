@@ -65,6 +65,7 @@ jobs:
           path: infrastructure/cdk.out/
           if-no-files-found: error
           retention-days: 30
+          overwrite: true   # re-running a release (the rollback runbook) replaces it
 
   deploy-dev:
     name: Dev
