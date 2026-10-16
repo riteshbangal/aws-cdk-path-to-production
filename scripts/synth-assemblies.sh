@@ -32,5 +32,6 @@ for env in "${envs[@]}"; do
   echo "::endgroup::"
 
   echo "Linting cdk.out/$env/$stack.template.json"
-  cfn-lint --non-zero-exit-code error --regions "$region" "cdk.out/$env/$stack.template.json"
+  # --regions accepts several values, so it must not sit right before the file name.
+  cfn-lint --regions "$region" --non-zero-exit-code error "cdk.out/$env/$stack.template.json"
 done
