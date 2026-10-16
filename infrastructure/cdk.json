@@ -1,0 +1,4 @@
+{
+  "app": "./gradlew --quiet run",
+  "output": "cdk.out"
+}

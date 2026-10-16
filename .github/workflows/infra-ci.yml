@@ -1,0 +1,75 @@
+name: Infra CI
+
+# Pipeline 2 of 3: infrastructure CI.
+# Unit-test the CDK code, synthesize the CloudFormation template for every
+# environment and lint it. Nothing here touches AWS: a green run proves the
+# templates are well-formed, not that a deployment will succeed.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "infrastructure/**"
+      - "foundation/**"
+      - "scripts/**"
+      - ".github/workflows/infra-ci.yml"
+      - ".github/actions/**"
+  pull_request:
+    branches: [main]
+    paths:
+      - "infrastructure/**"
+      - "foundation/**"
+      - "scripts/**"
+      - ".github/workflows/infra-ci.yml"
+      - ".github/actions/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Test, synthesize and lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: ./.github/actions/setup-toolchain
+        with:
+          cdk: "true"
+          lint: "true"
+
+      - name: Unit-test the infrastructure code
+        working-directory: infrastructure
+        run: ./gradlew test
+
+      - name: Get the pinned Lambda JAR
+        env:
+          ARTIFACTORY_BASE_URL: ${{ vars.ARTIFACTORY_BASE_URL }}
+          ARTIFACTORY_TOKEN: ${{ secrets.ARTIFACTORY_READ_TOKEN }}
+        run: |
+          if [[ -n "$ARTIFACTORY_BASE_URL" && -n "$ARTIFACTORY_TOKEN" ]]; then
+            scripts/fetch-lambda-artifact.sh
+          else
+            # Forks, fork pull requests (no secrets) and first-time readers land here.
+            echo "::notice::No artifact repository configured. Building the JAR from this commit only so synthesis has a file to package. Deployments never take this path."
+            (cd app && ./gradlew --quiet shadowJar)
+            mkdir -p infrastructure/artifacts
+            cp app/build/libs/hello-world-lambda.jar infrastructure/artifacts/
+          fi
+
+      - name: Synthesize and lint dev, qa and prod
+        run: scripts/synth-assemblies.sh dev qa prod
+
+      - name: Lint the foundation template
+        run: cfn-lint --non-zero-exit-code error foundation/github-oidc-deploy-role.yaml
+
+      # GitHub Actions storage, for reviewing the generated templates.
+      # Uploading here sends nothing to AWS CloudFormation.
+      - name: Keep the synthesized templates with this run
+        uses: actions/upload-artifact@v7
+        with:
+          name: cloud-assemblies-${{ github.sha }}
+          path: infrastructure/cdk.out/
+          if-no-files-found: error
+          retention-days: 7

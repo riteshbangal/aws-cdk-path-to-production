@@ -1,0 +1,110 @@
+name: Release
+
+# Pipeline 3 of 3: delivery.
+# Promote one pinned application release, through one set of synthesized
+# templates, from dev to qa to production:
+#
+#   synthesize ─► deploy dev + smoke ─► deploy qa + smoke ─► qa integration tests
+#              ─► production approval ─► deploy prod + smoke
+#
+# Runs automatically on infrastructure changes to main (including a new pin in
+# infrastructure/lambda-artifact.env) once the repository variable
+# DEPLOYMENTS_ENABLED is "true". It can also be started by hand.
+# The production approval is a required-reviewer rule on the GitHub
+# "production" environment (repository settings), not something in this file.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "infrastructure/**"
+  workflow_dispatch:
+    inputs:
+      promote_to:
+        description: How far to promote this release
+        type: choice
+        options: [dev, qa, production]
+        default: production
+
+permissions:
+  contents: read
+
+# One release at a time; never cancel a release halfway through.
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+jobs:
+  synthesize:
+    name: Synthesize release templates
+    if: vars.DEPLOYMENTS_ENABLED == 'true' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: ./.github/actions/setup-toolchain
+        with:
+          cdk: "true"
+          lint: "true"
+
+      - name: Fetch the pinned, digest-verified Lambda JAR
+        env:
+          ARTIFACTORY_BASE_URL: ${{ vars.ARTIFACTORY_BASE_URL }}
+          ARTIFACTORY_TOKEN: ${{ secrets.ARTIFACTORY_READ_TOKEN }}
+          REQUIRE_PINNED_DIGEST: "true"
+        run: scripts/fetch-lambda-artifact.sh
+
+      # Synthesized once here. Every environment below deploys these exact
+      # assemblies; nothing is rebuilt or re-synthesized per environment.
+      - name: Synthesize and lint one assembly per environment
+        run: scripts/synth-assemblies.sh dev qa prod
+
+      - uses: actions/upload-artifact@v7
+        with:
+          name: release-assemblies
+          path: infrastructure/cdk.out/
+          if-no-files-found: error
+          retention-days: 30
+
+  deploy-dev:
+    name: Dev
+    needs: synthesize
+    uses: ./.github/workflows/deploy-environment.yml
+    permissions:
+      contents: read
+      id-token: write
+    with:
+      environment: dev
+
+  deploy-qa:
+    name: QA
+    needs: deploy-dev
+    if: github.event_name == 'push' || inputs.promote_to != 'dev'
+    uses: ./.github/workflows/deploy-environment.yml
+    permissions:
+      contents: read
+      id-token: write
+    with:
+      environment: qa
+
+  integration-test-qa:
+    name: QA integration tests
+    needs: deploy-qa
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Run the QA contract checks
+        env:
+          API_URL: ${{ needs.deploy-qa.outputs.api_url }}
+        run: scripts/integration-test.sh "$API_URL"
+
+  deploy-production:
+    name: Production
+    needs: integration-test-qa
+    if: github.event_name == 'push' || inputs.promote_to == 'production'
+    uses: ./.github/workflows/deploy-environment.yml
+    permissions:
+      contents: read
+      id-token: write
+    with:
+      environment: production

@@ -1,0 +1,17 @@
+# Build outputs
+**/build/
+**/.gradle/
+**/cdk.out/
+*.class
+
+# Released artifacts are fetched, never committed
+infrastructure/artifacts/
+
+# CDK deploy outputs
+outputs.json
+
+# IDE and OS
+.idea/
+*.iml
+.vscode/
+.DS_Store

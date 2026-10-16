@@ -1,0 +1,83 @@
+name: Deploy environment
+
+# Reusable: deploy one environment from the assemblies that release.yml
+# synthesized, then smoke-test it. Called once per environment.
+#
+# Per GitHub environment (Settings → Environments), configure:
+#   AWS_DEPLOY_ROLE_ARN  variable: the role created by foundation/github-oidc-deploy-role.yaml
+#   AWS_REGION           variable (optional, defaults to eu-west-1)
+#   Deployment branches: main only. For "production", also required reviewers.
+
+on:
+  workflow_call:
+    inputs:
+      environment:
+        description: GitHub environment to deploy (dev, qa or production)
+        type: string
+        required: true
+    outputs:
+      api_url:
+        description: URL of GET /hello in the deployed environment
+        value: ${{ jobs.deploy.outputs.api_url }}
+
+jobs:
+  deploy:
+    name: Deploy and smoke-test
+    runs-on: ubuntu-latest
+    environment:
+      name: ${{ inputs.environment }}
+      url: ${{ steps.deploy.outputs.api_url }}
+    permissions:
+      contents: read
+      id-token: write   # lets this job request a GitHub OIDC token
+    concurrency:
+      group: deploy-${{ inputs.environment }}
+      cancel-in-progress: false
+    outputs:
+      api_url: ${{ steps.deploy.outputs.api_url }}
+    env:
+      STAGE: ${{ inputs.environment == 'production' && 'prod' || inputs.environment }}
+    steps:
+      - uses: actions/checkout@v7
+
+      # Deploying a pre-built assembly needs only Node.js and the CDK CLI.
+      - uses: ./.github/actions/setup-toolchain
+        with:
+          java: "false"
+          cdk: "true"
+
+      - name: Get the release assemblies
+        uses: actions/download-artifact@v8
+        with:
+          name: release-assemblies
+          path: cdk.out
+
+      # GitHub token -> AWS STS -> short-lived credentials for this environment's role.
+      - name: Sign in to AWS with OIDC (no stored keys)
+        uses: aws-actions/configure-aws-credentials@v6
+        with:
+          role-to-assume: ${{ vars.AWS_DEPLOY_ROLE_ARN }}
+          aws-region: ${{ vars.AWS_REGION || 'eu-west-1' }}
+
+      - name: Deploy ${{ inputs.environment }}
+        id: deploy
+        run: |
+          case "$STAGE" in
+            dev)  stack=GreetingApiDevStack ;;
+            qa)   stack=GreetingApiQaStack ;;
+            prod) stack=GreetingApiProdStack ;;
+            *)    echo "::error::Unknown environment '$STAGE'"; exit 1 ;;
+          esac
+          # Waits for CloudFormation to finish, so no fixed sleep is needed afterwards.
+          cdk deploy "$stack" \
+            --app "cdk.out/$STAGE" \
+            --require-approval never \
+            --outputs-file outputs.json
+          api_url="$(jq -r --arg stack "$stack" '.[$stack].ApiUrl' outputs.json)"
+          [[ "$api_url" == https://* ]] || { echo "::error::No ApiUrl output found"; exit 1; }
+          echo "api_url=$api_url" >> "$GITHUB_OUTPUT"
+
+      - name: Smoke test
+        env:
+          API_URL: ${{ steps.deploy.outputs.api_url }}
+        run: scripts/smoke-test.sh "$API_URL"

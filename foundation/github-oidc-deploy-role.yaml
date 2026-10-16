@@ -1,0 +1,90 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: >-
+  Foundation for aws-cdk-path-to-production. Lets GitHub Actions jobs in one
+  GitHub environment deploy to this AWS account through OIDC, with no stored
+  AWS keys. Apply once per AWS account and environment, after `cdk bootstrap`.
+
+Parameters:
+  GitHubRepoClaim:
+    Type: String
+    Description: >-
+      Repository part of the GitHub OIDC subject claim. Repositories created
+      after 15 July 2026 use immutable IDs, for example
+      repo:OWNER@OWNER_ID/REPO@REPO_ID. Older repositories use repo:OWNER/REPO
+      unless they opted in. docs/02-aws-authentication-oidc.md shows how to read yours.
+    AllowedPattern: "^repo:[^:*]+$"
+    ConstraintDescription: "Must start with repo: and contain no wildcards or further colons."
+
+  GitHubEnvironment:
+    Type: String
+    Description: The GitHub environment whose jobs may assume this role.
+    AllowedValues: [dev, qa, production]
+
+  CreateOidcProvider:
+    Type: String
+    Description: >-
+      Set to false if this AWS account already has the
+      token.actions.githubusercontent.com identity provider (an account can only have one).
+    AllowedValues: ["true", "false"]
+    Default: "true"
+
+  CdkQualifier:
+    Type: String
+    Description: Qualifier used by `cdk bootstrap`. Keep the default unless you customized it.
+    Default: hnb659fds
+
+Conditions:
+  ShouldCreateOidcProvider: !Equals [!Ref CreateOidcProvider, "true"]
+
+Resources:
+  GitHubOidcProvider:
+    Type: AWS::IAM::OIDCProvider
+    Condition: ShouldCreateOidcProvider
+    Properties:
+      Url: https://token.actions.githubusercontent.com
+      ClientIdList:
+        - sts.amazonaws.com
+
+  DeployRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Sub aws-cdk-path-to-production-${GitHubEnvironment}-deploy
+      Description: !Sub Assumed by GitHub Actions jobs running in the ${GitHubEnvironment} environment
+      MaxSessionDuration: 3600
+      # WHO may assume this role: only tokens issued by GitHub, meant for AWS STS,
+      # for this exact repository and GitHub environment.
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Federated: !If
+                - ShouldCreateOidcProvider
+                - !Ref GitHubOidcProvider
+                - !Sub arn:${AWS::Partition}:iam::${AWS::AccountId}:oidc-provider/token.actions.githubusercontent.com
+            Action: sts:AssumeRoleWithWebIdentity
+            Condition:
+              StringEquals:
+                token.actions.githubusercontent.com:aud: sts.amazonaws.com
+                token.actions.githubusercontent.com:sub: !Sub ${GitHubRepoClaim}:environment:${GitHubEnvironment}
+      # WHAT the role may do: only hand the work to the roles that `cdk bootstrap`
+      # created. Those roles publish assets and drive CloudFormation.
+      Policies:
+        - PolicyName: assume-cdk-bootstrap-roles
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action: sts:AssumeRole
+                Resource:
+                  - !Sub arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-${CdkQualifier}-deploy-role-${AWS::AccountId}-${AWS::Region}
+                  - !Sub arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-${CdkQualifier}-file-publishing-role-${AWS::AccountId}-${AWS::Region}
+                  - !Sub arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-${CdkQualifier}-lookup-role-${AWS::AccountId}-${AWS::Region}
+      Tags:
+        - Key: project
+          Value: aws-cdk-path-to-production
+
+Outputs:
+  DeployRoleArn:
+    Description: Store this as the AWS_DEPLOY_ROLE_ARN variable of the matching GitHub environment.
+    Value: !GetAtt DeployRole.Arn

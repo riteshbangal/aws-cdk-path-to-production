@@ -1,0 +1,51 @@
+name: Set up toolchain
+description: >-
+  Java 21 + Gradle for building, and optionally Node.js, the pinned AWS CDK CLI
+  and cfn-lint for infrastructure work. One place to change tool versions.
+
+inputs:
+  java:
+    description: Install Java 21 and Gradle (with caching)
+    default: "true"
+  cdk:
+    description: Install Node.js and the pinned AWS CDK CLI
+    default: "false"
+  lint:
+    description: Install the pinned cfn-lint
+    default: "false"
+  cdk-cli-version:
+    description: AWS CDK CLI version
+    default: "2.1145.0"
+  cfn-lint-version:
+    description: cfn-lint version
+    default: "1.57.2"
+
+runs:
+  using: composite
+  steps:
+    - if: inputs.java == 'true'
+      uses: actions/setup-java@v6
+      with:
+        distribution: temurin
+        java-version: "21"
+
+    - if: inputs.java == 'true'
+      uses: gradle/actions/setup-gradle@v6
+
+    # Node.js is needed by the CDK CLI and by the jsii runtime behind CDK for Java.
+    - if: inputs.cdk == 'true'
+      uses: actions/setup-node@v7
+      with:
+        node-version: "24"
+
+    - if: inputs.cdk == 'true'
+      shell: bash
+      env:
+        CDK_CLI_VERSION: ${{ inputs.cdk-cli-version }}
+      run: npm install --global --no-fund --no-audit "aws-cdk@${CDK_CLI_VERSION}"
+
+    - if: inputs.lint == 'true'
+      shell: bash
+      env:
+        CFN_LINT_VERSION: ${{ inputs.cfn-lint-version }}
+      run: pipx install "cfn-lint==${CFN_LINT_VERSION}"
