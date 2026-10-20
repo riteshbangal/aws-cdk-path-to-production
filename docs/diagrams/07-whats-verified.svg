@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="560" viewBox="0 0 800 560">
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+  <text x="40" y="56" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="700" fill="#0F172A" text-anchor="start">What&#x27;s verified, and what&#x27;s next</text>
+  <text x="40" y="88" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="400" fill="#64748B" text-anchor="start">What the repository proves today, and what it doesn&#x27;t</text>
+  <rect x="40" y="124" width="720" height="104" rx="14" ry="14" fill="#ECF7F0" stroke="#2E8B57" stroke-width="2"/>
+  <text x="68" y="166" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="21" font-weight="700" fill="#14532D" text-anchor="start">Verified on every push</text>
+  <text x="68" y="198" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="400" fill="#334155" text-anchor="start">build · unit tests · CDK tests · synth · cfn-lint</text>
+  <text x="732" y="166" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" fill="#64748B" text-anchor="end">App CI + Infra CI</text>
+  <circle cx="576.8" cy="161" r="11" fill="#2E8B57"/><path d="M571.8,161 l3.5,3.5 l6.5,-7" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="40" y="250" width="720" height="104" rx="14" ry="14" fill="#EEF3FB" stroke="#4A6FA5" stroke-width="2"/>
+  <text x="68" y="292" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="21" font-weight="700" fill="#1E3A66" text-anchor="start">Ready, runs once you connect AWS + Artifactory</text>
+  <text x="68" y="324" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="400" fill="#334155" text-anchor="start">publish · cdk deploy · smoke + QA tests · promotion</text>
+  <text x="732" y="292" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" fill="#64748B" text-anchor="end">Release pipeline</text>
+  <rect x="40" y="376" width="720" height="104" rx="14" ry="14" fill="#FFF4E8" stroke="#D9822B" stroke-width="2" stroke-dasharray="7 6"/>
+  <text x="68" y="418" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="21" font-weight="700" fill="#7A3E06" text-anchor="start">Add before real traffic</text>
+  <text x="68" y="450" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="400" fill="#334155" text-anchor="start">API auth · alarms · scoped IAM · separate AWS accounts</text>
+  <text x="732" y="418" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" fill="#64748B" text-anchor="end">Hardening</text>
+  <text x="400.0" y="526" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="500" fill="#334155" text-anchor="middle" font-style="italic">Nothing here claims a deployment has run.</text>
+</svg>

@@ -419,6 +419,35 @@ def d6_promotion():
     d.save()
 
 
+# 7 ─ status --------------------------------------------------------------
+def d7_status():
+    d = Diagram("07-whats-verified", 560, "What's verified, and what's next",
+                "What the repository proves today, and what it doesn't")
+    rows = [
+        ("ok", "Verified on every push", "App CI + Infra CI",
+         "build · unit tests · CDK tests · synth · cfn-lint", None),
+        ("ci", "Ready, runs once you connect AWS + Artifactory", "Release pipeline",
+         "publish · cdk deploy · smoke + QA tests · promotion", None),
+        ("aws", "Add before real traffic", "Hardening",
+         "API auth · alarms · scoped IAM · separate AWS accounts", "7 6"),
+    ]
+    y = 124
+    for kind, title, tag, line, dash in rows:
+        fill, stroke, tcol = KINDS[kind]
+        d.rect(40, y, 720, 104, fill, stroke, r=14, dash=dash)
+        d.text(68, y + 42, title, 21, 700, tcol)
+        d.text(68, y + 74, line, 17, 400, SLATE)
+        d.text(732, y + 42, tag, 14, 600, MUTED, "end")
+        if kind == "ok":
+            cx, cy = 732 - len(tag) * 7.6 - 26, y + 37
+            d.add(f'<circle cx="{cx}" cy="{cy}" r="11" fill="{stroke}"/>'
+                  f'<path d="M{cx - 5},{cy} l3.5,3.5 l6.5,-7" fill="none" stroke="#FFFFFF" '
+                  f'stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>')
+        y += 104 + 22
+    d.footer(526, "Nothing here claims a deployment has run.")
+    d.save()
+
+
 if __name__ == "__main__":
     d1_journey()
     d2_two_kinds_of_code()
@@ -426,3 +455,4 @@ if __name__ == "__main__":
     d4_bootstrap()
     d5_oidc()
     d6_promotion()
+    d7_status()
