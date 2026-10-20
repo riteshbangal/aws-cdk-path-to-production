@@ -7,11 +7,13 @@ The path from commit to production for a serverless app on AWS: versioned artifa
 
 The app is deliberately a Hello World, so the delivery path stays the focus.
 
+**Read the walkthrough:** [Hello World, the Production Way](https://dev.to/riteshbangal/hello-world-the-production-way-java-aws-cdk-and-github-actions-2lgc) on DEV.
+
 <p align="center">
-  <img src="docs/diagrams/00-path-to-production.gif" width="800"
+  <img src="https://raw.githubusercontent.com/riteshbangal/aws-cdk-path-to-production/main/docs/diagrams/00-path-to-production.gif" width="800"
        alt="Animation of one release, 1.2.3, moving from commit to production. A push reaches GitHub. App CI and Infra CI check it with no AWS access. A tag publishes the JAR once to Artifactory. A pull request pins it, and AWS CDK synthesizes CloudFormation templates once. The release job signs in to AWS with OIDC, then the same files deploy to Dev, QA after a smoke test, and Prod after tests and a person's approval.">
 </p>
-<p align="center"><sub>One release, from commit to production. A <a href="docs/diagrams/01-the-path-to-production.png">static version</a> is also available.</sub></p>
+<p align="center"><sub>One release, from commit to production. A <a href="https://github.com/riteshbangal/aws-cdk-path-to-production/blob/main/docs/diagrams/01-the-path-to-production.png">static version</a> is also available.</sub></p>
 
 ## What's in here
 
